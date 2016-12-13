@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+
+  znc:
+    image: larsks/znc
+    command: -nf
+    ports:
+      - "6667:6667"
+      - "6697:6697"
+      - "443:8443"
+    volumes:
+      - "./znc:/znc"
+      - "./log:/znc/moddata/log"
+
+  bitlbee:
+    image: larsks/bitlbee
+    volumes:
+      - "./bitlbee:/var/lib/bitlbee"
