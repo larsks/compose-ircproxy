@@ -9,6 +9,8 @@ services:
       - "6667:6667"
       - "6697:6697"
       - "443:8443"
+    environment:
+      ZNCDIR: /znc
     volumes:
       - "./znc:/znc"
       - "./znc-log:/znc/moddata/log"
