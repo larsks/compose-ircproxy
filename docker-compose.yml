@@ -3,7 +3,7 @@ version: "2"
 services:
 
   znc:
-    image: larsks/znc
+    image: larsks/znc:e35e23c9
     command: -nf
     ports:
       - "6667:6667"
