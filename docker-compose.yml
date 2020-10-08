@@ -19,3 +19,6 @@ services:
     image: larsks/bitlbee:89949d3b
     volumes:
       - "./bitlbee:/var/lib/bitlbee"
+    environment:
+      BITLBEE_DAEMONPORT: 7667
+    network_mode: "service:znc"
